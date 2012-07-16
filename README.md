@@ -17,7 +17,7 @@ If you just want to download the executable then go to the **[download page](htt
 
 * This tool is for almost any version of Microsoft Windows (sorry Mac and Linux users).
 * There is no file size check so be careful. If you try to process a big file it will hang your computer for some time, or lock up entirely. Files less than 32KB (IE8 limit) will be basically instantaneous.
-* This is a Visual Studio 2008 project.
+* This is a Visual Studio 2010 project.
 
 ## License
 
