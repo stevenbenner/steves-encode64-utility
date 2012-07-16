@@ -30,15 +30,17 @@ namespace Steves_Encode64_Utility
 
 		private string Base64Encode(string fileToEncode)
 		{
+			byte[] EncodeBuffer;
+
 			using (FileStream fs = new FileStream(fileToEncode, FileMode.Open))
 			{
 				int Length = Convert.ToInt32(fs.Length);
-				byte[] EncodeBuffer = new byte[Length];
+				EncodeBuffer = new byte[Length];
 
 				fs.Read(EncodeBuffer, 0, Length);
-
-				return Convert.ToBase64String(EncodeBuffer);
 			}
+
+			return Convert.ToBase64String(EncodeBuffer);
 		}
 
 		private void buttonCopy_Click(object sender, EventArgs e)
