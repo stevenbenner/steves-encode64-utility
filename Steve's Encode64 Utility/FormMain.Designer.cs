@@ -34,9 +34,9 @@
 			this.textFileName = new System.Windows.Forms.TextBox();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
 			this.buttonCopy = new System.Windows.Forms.Button();
-			this.textEncodedString = new System.Windows.Forms.TextBox();
 			this.linkLabel1 = new System.Windows.Forms.LinkLabel();
 			this.label2 = new System.Windows.Forms.Label();
+			this.textEncodedString = new System.Windows.Forms.RichTextBox();
 			this.groupBox1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -73,8 +73,8 @@
 			// 
 			// groupBox1
 			// 
-			this.groupBox1.Controls.Add(this.buttonCopy);
 			this.groupBox1.Controls.Add(this.textEncodedString);
+			this.groupBox1.Controls.Add(this.buttonCopy);
 			this.groupBox1.Location = new System.Drawing.Point(15, 55);
 			this.groupBox1.Name = "groupBox1";
 			this.groupBox1.Size = new System.Drawing.Size(305, 104);
@@ -91,14 +91,6 @@
 			this.buttonCopy.Text = "Copy to Clipboard";
 			this.buttonCopy.UseVisualStyleBackColor = true;
 			this.buttonCopy.Click += new System.EventHandler(this.buttonCopy_Click);
-			// 
-			// textEncodedString
-			// 
-			this.textEncodedString.Location = new System.Drawing.Point(7, 32);
-			this.textEncodedString.Name = "textEncodedString";
-			this.textEncodedString.ReadOnly = true;
-			this.textEncodedString.Size = new System.Drawing.Size(292, 20);
-			this.textEncodedString.TabIndex = 0;
 			// 
 			// linkLabel1
 			// 
@@ -122,6 +114,16 @@
 			this.label2.TabIndex = 5;
 			this.label2.Text = "Tool by Steven Benner";
 			// 
+			// textEncodedString
+			// 
+			this.textEncodedString.Location = new System.Drawing.Point(7, 32);
+			this.textEncodedString.Multiline = false;
+			this.textEncodedString.Name = "textEncodedString";
+			this.textEncodedString.ReadOnly = true;
+			this.textEncodedString.Size = new System.Drawing.Size(292, 20);
+			this.textEncodedString.TabIndex = 2;
+			this.textEncodedString.Text = "";
+			// 
 			// FormMain
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -139,7 +141,6 @@
 			this.ShowIcon = false;
 			this.Text = "Steve\'s Encode64 Utility";
 			this.groupBox1.ResumeLayout(false);
-			this.groupBox1.PerformLayout();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -153,9 +154,9 @@
 		private System.Windows.Forms.TextBox textFileName;
 		private System.Windows.Forms.GroupBox groupBox1;
 		private System.Windows.Forms.Button buttonCopy;
-		private System.Windows.Forms.TextBox textEncodedString;
 		private System.Windows.Forms.LinkLabel linkLabel1;
 		private System.Windows.Forms.Label label2;
+		private System.Windows.Forms.RichTextBox textEncodedString;
 	}
 }
 
