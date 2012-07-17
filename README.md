@@ -6,7 +6,7 @@ This is my Encode64 tool for Microsoft Windows. It's used for creating data URIs
 
 ## Download
 
-If you just want to download the executable then go to the **[download page](http://stevenbenner.com/code/steves-encode64-utility/)** on my site.
+If you want to download the latest executable then go to the **[download page](https://github.com/stevenbenner/steves-encode64-utility/downloads)** for this project.
 
 ## Usage
 
