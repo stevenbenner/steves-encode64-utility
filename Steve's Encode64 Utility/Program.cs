@@ -2,7 +2,7 @@
 using System.Windows.Forms;
 
 /** Steve's Encode64 Utility
- ** Copyright © 2010 Steven Benner.
+ ** Copyright © 2012 Steven Benner.
  ** http://stevenbenner.com/
  * 
  * A simple tool to base64 encode files and grab the

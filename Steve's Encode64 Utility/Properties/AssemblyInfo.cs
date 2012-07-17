@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("Steve's Encode64 Utility")]
-[assembly: AssemblyCopyright("Copyright © Steven Benner 2010. All rights reserved.")]
+[assembly: AssemblyCopyright("© Steven Benner")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
