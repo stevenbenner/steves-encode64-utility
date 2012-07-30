@@ -9,6 +9,7 @@
 
 using System;
 using System.IO;
+using System.Text;
 using System.Windows.Forms;
 
 namespace Steves_Encode64_Utility
@@ -25,7 +26,14 @@ namespace Steves_Encode64_Utility
 			if (openFileDialog1.ShowDialog() != DialogResult.Cancel)
 			{
 				textFileName.Text = openFileDialog1.FileName;
-				textEncodedString.Text = Base64Encode(openFileDialog1.FileName);
+
+				StringBuilder sb = new StringBuilder();
+				sb.Append("data:");
+				sb.Append(GetMimeType(openFileDialog1.FileName));
+				sb.Append(";base64,");
+				sb.Append(Base64Encode(openFileDialog1.FileName));
+
+				textEncodedString.Text = sb.ToString();
 			}
 		}
 
@@ -42,6 +50,21 @@ namespace Steves_Encode64_Utility
 			}
 
 			return Convert.ToBase64String(EncodeBuffer);
+		}
+
+		private string GetMimeType(string fileName)
+		{
+			string mimeType = "application/unknown";
+			string ext = Path.GetExtension(fileName).ToLower();
+
+			Microsoft.Win32.RegistryKey regKey = Microsoft.Win32.Registry.ClassesRoot.OpenSubKey(ext);
+
+			if (regKey != null && regKey.GetValue("Content Type") != null)
+			{
+				mimeType = regKey.GetValue("Content Type").ToString();
+			}
+
+			return mimeType;
 		}
 
 		private void buttonCopy_Click(object sender, EventArgs e)
