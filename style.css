@@ -1,0 +1,112 @@
+* {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: arial, helvetica, sans-serif;
+	font-size: 14px;
+	line-height: 23px;
+	background-color: #E7E7E7;
+}
+a, a:link, a:active, a:visited {
+	color: #00C;
+	text-decoration: none;
+}
+a:hover {
+	color: #C00;
+	text-decoration: underline;
+}
+
+#wrapper {
+	width: 600px;
+	margin: 0 auto;
+	padding: 40px 0 10px;
+}
+
+#header {
+	font-family: 'Open Sans', sans-serif;
+	text-align: center;
+	padding-bottom: 20px;
+	border-bottom: 3px dotted #CCC;
+}
+#header h1 {
+	font-size: 40px;
+	font-weight: normal;
+	margin-bottom: 25px;
+}
+#header p {
+	font-size: 16px;
+}
+
+#content {
+	padding: 40px 0;
+}
+h2 {
+	margin-bottom: 20px;
+	text-align: center;
+}
+p, ul {
+	margin-bottom: 20px;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+li {
+	margin-left: 30px;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+#footer {
+	font-size: 13px;
+	color: #AAA;
+	text-align: center;
+	padding-top: 20px;
+	border-top: 3px dotted #CCC;
+}
+#footer a {
+	color: #666 !important;
+}
+
+#github-link img {
+	position: absolute;
+	top: 0;
+	right: 0;
+	border: 0;
+}
+
+.button {
+	background-color: #070;
+	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAyCAYAAACd+7GKAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAE9JREFUeNqczksOgCAMhOEWReMjEI3ex/sfyuq/IYEEFmy+TCezqJrZ40TEEpKfBW+z60z1if7/3XDBCQdECLDDBissMMMEHkYYwCX0E2AAJY1X4Tmgv0cAAAAASUVORK5CYII=');
+	background-repeat: repeat-x;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+	border-radius: 10px;
+	border-top: 1px solid rgba(255, 255, 255, 0.6);
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0.5) inset;
+	color: #FFF !important;
+	cursor: pointer;
+	font-size: 16px;
+	padding: 13px 40px;
+	text-align: center;
+	text-shadow: -1px -1px 0 #222;
+	line-height: 47px;
+	transition-duration: .35s;
+	-webkit-transition-duration: .35s;
+	-moz-transition-duration: .35s;
+	text-decoration: none !important;
+	font-weight: bold;
+}
+.button:hover {
+	background-color: #080;
+}
+.button:active {
+	background-color: #060;
+}
+
+#title-image, #buttons {
+	text-align: center;
+}
+#buttons span {
+	display: block;
+	font-size: 12px;
+	color: #666;
+}
