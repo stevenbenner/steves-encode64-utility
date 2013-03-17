@@ -14,6 +14,11 @@
 			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
 			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 		})();
+		window.onload = function() {
+			document.getElementById('download-link').onclick = function() {
+				_gaq.push(['_trackEvent', 'Download', 'Encode64', this.href]);
+			};
+		};
 	</script>
 </head>
 <body>
@@ -25,7 +30,7 @@
 		<div id="content">
 			<p id="title-image"><img src="steves-encode64-utility.png" width="345" height="226" alt="Steve's Encode64 Utility Screen Shot" /></p>
 			<p id="buttons">
-				<a href="https://github.com/downloads/stevenbenner/steves-encode64-utility/Steves%20Encode64%20Utility%20v1.2.exe" class="button">Download v1.2</a>
+				<a href="https://github.com/downloads/stevenbenner/steves-encode64-utility/Steves%20Encode64%20Utility%20v1.2.exe" class="button" id="download-link">Download v1.2</a>
 				<span>Stand-alone executable for Windows</span>
 			</p>
 			<p>This is my super-simple Encode64 tool for Microsoft Windows. It's used for creating <a href="http://stevenbenner.com/2010/05/ultimate-web-site-optimization-trick-data-uris/">data URIs</a>.</p>
