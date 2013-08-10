@@ -25,17 +25,22 @@ namespace Steves_Encode64_Utility
 		{
 			if (openFileDialog1.ShowDialog() != DialogResult.Cancel)
 			{
-				textFileName.Text = openFileDialog1.FileName;
-
-				StringBuilder sb = new StringBuilder();
-				sb.Append("data:");
-				sb.Append(GetMimeType(openFileDialog1.FileName));
-				sb.Append(";base64,");
-				sb.Append(Base64Encode(openFileDialog1.FileName));
-
-				textEncodedString.Text = sb.ToString();
+			    SelectFile(openFileDialog1.FileName);
 			}
 		}
+
+        void SelectFile(string filename)
+        {
+            textFileName.Text = filename;
+
+            StringBuilder sb = new StringBuilder();
+            sb.Append("data:");
+            sb.Append(GetMimeType(filename));
+            sb.Append(";base64,");
+            sb.Append(Base64Encode(filename));
+
+            textEncodedString.Text = sb.ToString();
+        }
 
 		private string Base64Encode(string fileToEncode)
 		{
@@ -76,5 +81,23 @@ namespace Steves_Encode64_Utility
 		{
 			System.Diagnostics.Process.Start("http://stevenbenner.com/?utm_source=apps&utm_medium=encode64&utm_campaign=Apps%3A%2BEncode64%20Tool");
 		}
+
+        private void FormMain_DragEnter(object sender, DragEventArgs e)
+        {
+            e.Effect = DragDropEffects.Link;
+        }
+
+        private void FormMain_DragDrop(object sender, DragEventArgs e)
+        {
+            var files = (string[]) e.Data.GetData(DataFormats.FileDrop);
+            if (files.Length != 1)
+            {
+                MessageBox.Show("Sorry, one file at a time please!", "Steve's Encode64 Utility", MessageBoxButtons.OK,
+                                MessageBoxIcon.Exclamation);
+                return;
+            }
+
+            SelectFile(files[0]);
+        }
 	}
 }
