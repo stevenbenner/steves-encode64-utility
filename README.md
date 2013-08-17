@@ -10,7 +10,7 @@ If you want to download the latest executable then go to the **[download page](h
 
 ## Usage
 
-* Click the *Select File* button, open the file you want to convert. The tool will show the encoded string.
+* Click the *Select File* button to open the file you want to convert or drag and drop the file on the window. The tool will show the encoded string.
 * Then click the *Copy to Clipboard* button. Paste the string wherever you need it.
 
 ## Information
