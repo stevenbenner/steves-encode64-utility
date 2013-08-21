@@ -21,7 +21,7 @@ namespace Steves_Encode64_Utility
 			InitializeComponent();
 		}
 
-		void SelectFile(string filename)
+		private void SelectFile(string filename)
 		{
 			textFileName.Text = filename;
 
