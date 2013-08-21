@@ -21,38 +21,38 @@ namespace Steves_Encode64_Utility
 			InitializeComponent();
 		}
 
-		private void SelectFile(string filename)
+		private void SelectFile(string filePath)
 		{
-			textFileName.Text = filename;
+			textFileName.Text = filePath;
 
 			StringBuilder sb = new StringBuilder();
 			sb.Append("data:");
-			sb.Append(GetMimeType(filename));
+			sb.Append(GetMimeType(filePath));
 			sb.Append(";base64,");
-			sb.Append(Base64Encode(filename));
+			sb.Append(Base64Encode(filePath));
 
 			textEncodedString.Text = sb.ToString();
 		}
 
-		private string Base64Encode(string fileToEncode)
+		private string Base64Encode(string filePath)
 		{
-			byte[] EncodeBuffer;
+			byte[] buffer;
 
-			using (FileStream fs = new FileStream(fileToEncode, FileMode.Open))
+			using (FileStream fs = new FileStream(filePath, FileMode.Open))
 			{
-				int Length = Convert.ToInt32(fs.Length);
-				EncodeBuffer = new byte[Length];
+				int length = Convert.ToInt32(fs.Length);
+				buffer = new byte[length];
 
-				fs.Read(EncodeBuffer, 0, Length);
+				fs.Read(buffer, 0, length);
 			}
 
-			return Convert.ToBase64String(EncodeBuffer);
+			return Convert.ToBase64String(buffer);
 		}
 
-		private string GetMimeType(string fileName)
+		private string GetMimeType(string filePath)
 		{
 			string mimeType = "application/unknown";
-			string ext = Path.GetExtension(fileName).ToLower();
+			string ext = Path.GetExtension(filePath).ToLower();
 
 			Microsoft.Win32.RegistryKey regKey = Microsoft.Win32.Registry.ClassesRoot.OpenSubKey(ext);
 
