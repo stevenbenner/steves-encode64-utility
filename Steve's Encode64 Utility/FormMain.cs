@@ -124,7 +124,9 @@ namespace Steves_Encode64_Utility
 			var files = (string[]) e.Data.GetData(DataFormats.FileDrop);
 			if (files.Length != 1)
 			{
+				this.Activate();
 				MessageBox.Show(
+					this,
 					"Sorry, one file at a time please!",
 					"Steve's Encode64 Utility",
 					MessageBoxButtons.OK,
