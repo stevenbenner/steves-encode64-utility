@@ -1,6 +1,6 @@
 ﻿/*!
  * Steve's Encode64 Utility
- * Copyright © 2012 Steven Benner.
+ * Copyright © 2013 Steven Benner.
  * https://github.com/stevenbenner/steves-encode64-utility
  * 
  * A simple tool to base64 encode files and grab the
