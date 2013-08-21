@@ -16,6 +16,8 @@ namespace Steves_Encode64_Utility
 {
 	public partial class FormMain : Form
 	{
+		private const int maxFileSize = 10485760;
+
 		public FormMain()
 		{
 			InitializeComponent();
@@ -23,6 +25,10 @@ namespace Steves_Encode64_Utility
 
 		private void SelectFile(string filePath)
 		{
+			if (!CheckFileSize(filePath)) {
+				return;
+			}
+
 			textFileName.Text = filePath;
 
 			StringBuilder sb = new StringBuilder();
@@ -62,6 +68,30 @@ namespace Steves_Encode64_Utility
 			}
 
 			return mimeType;
+		}
+
+		private bool CheckFileSize(string filePath)
+		{
+			FileInfo fi = new FileInfo(filePath);
+
+			if (fi.Length > maxFileSize)
+			{
+				this.Activate();
+				DialogResult dr = MessageBox.Show(
+					this,
+					"The file you are attempting to process is quite large, are you sure you want to do this?",
+					"Steve's Encode64 Utility",
+					MessageBoxButtons.YesNo,
+					MessageBoxIcon.Warning
+				);
+
+				if (dr == DialogResult.No)
+				{
+					return false;
+				}
+			}
+
+			return true;
 		}
 
 		#region Event Handlers
