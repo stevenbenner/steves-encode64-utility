@@ -21,14 +21,6 @@ namespace Steves_Encode64_Utility
 			InitializeComponent();
 		}
 
-		private void buttonBrowse_Click(object sender, EventArgs e)
-		{
-			if (openFileDialog1.ShowDialog() != DialogResult.Cancel)
-			{
-				SelectFile(openFileDialog1.FileName);
-			}
-		}
-
 		void SelectFile(string filename)
 		{
 			textFileName.Text = filename;
@@ -72,6 +64,16 @@ namespace Steves_Encode64_Utility
 			return mimeType;
 		}
 
+		#region Event Handlers
+
+		private void buttonBrowse_Click(object sender, EventArgs e)
+		{
+			if (openFileDialog1.ShowDialog() != DialogResult.Cancel)
+			{
+				SelectFile(openFileDialog1.FileName);
+			}
+		}
+
 		private void buttonCopy_Click(object sender, EventArgs e)
 		{
 			Clipboard.SetText(textEncodedString.Text, TextDataFormat.Text);
@@ -99,5 +101,7 @@ namespace Steves_Encode64_Utility
 
 			SelectFile(files[0]);
 		}
+
+		#endregion
 	}
 }
