@@ -23,7 +23,7 @@ namespace Steves_Encode64_Utility
 			InitializeComponent();
 		}
 
-		private void SelectFile(string filePath)
+		private void ProcessFile(string filePath)
 		{
 			if (!CheckFileSize(filePath)) {
 				return;
@@ -100,7 +100,7 @@ namespace Steves_Encode64_Utility
 		{
 			if (openFileDialog1.ShowDialog() != DialogResult.Cancel)
 			{
-				SelectFile(openFileDialog1.FileName);
+				ProcessFile(openFileDialog1.FileName);
 			}
 		}
 
@@ -135,7 +135,7 @@ namespace Steves_Encode64_Utility
 				return;
 			}
 
-			SelectFile(files[0]);
+			ProcessFile(files[0]);
 		}
 
 		#endregion
