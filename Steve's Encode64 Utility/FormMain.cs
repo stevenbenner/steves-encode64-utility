@@ -76,7 +76,6 @@ namespace Steves_Encode64_Utility
 
 			if (fi.Length > maxFileSize)
 			{
-				this.Activate();
 				DialogResult dr = MessageBox.Show(
 					this,
 					"The file you are attempting to process is quite large, are you sure you want to do this?",
@@ -121,11 +120,12 @@ namespace Steves_Encode64_Utility
 
 		private void FormMain_DragDrop(object sender, DragEventArgs e)
 		{
+			this.Activate();
+
 			string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
 
 			if (files.Length != 1)
 			{
-				this.Activate();
 				MessageBox.Show(
 					this,
 					"Sorry, one file at a time please!",
