@@ -121,7 +121,8 @@ namespace Steves_Encode64_Utility
 
 		private void FormMain_DragDrop(object sender, DragEventArgs e)
 		{
-			var files = (string[]) e.Data.GetData(DataFormats.FileDrop);
+			string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
+
 			if (files.Length != 1)
 			{
 				this.Activate();
