@@ -35,7 +35,7 @@
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
 			this.textEncodedString = new System.Windows.Forms.RichTextBox();
 			this.buttonCopy = new System.Windows.Forms.Button();
-			this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+			this.linkWebSite = new System.Windows.Forms.LinkLabel();
 			this.label2 = new System.Windows.Forms.Label();
 			this.groupBox1.SuspendLayout();
 			this.SuspendLayout();
@@ -103,18 +103,18 @@
 			this.buttonCopy.UseVisualStyleBackColor = true;
 			this.buttonCopy.Click += new System.EventHandler(this.buttonCopy_Click);
 			// 
-			// linkLabel1
+			// linkWebSite
 			// 
-			this.linkLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.linkLabel1.AutoSize = true;
-			this.linkLabel1.Location = new System.Drawing.Point(185, 166);
-			this.linkLabel1.Name = "linkLabel1";
-			this.linkLabel1.Size = new System.Drawing.Size(131, 13);
-			this.linkLabel1.TabIndex = 4;
-			this.linkLabel1.TabStop = true;
-			this.linkLabel1.Text = "http://stevenbenner.com/";
-			this.linkLabel1.TextAlign = System.Drawing.ContentAlignment.TopRight;
-			this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+			this.linkWebSite.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.linkWebSite.AutoSize = true;
+			this.linkWebSite.Location = new System.Drawing.Point(185, 166);
+			this.linkWebSite.Name = "linkWebSite";
+			this.linkWebSite.Size = new System.Drawing.Size(131, 13);
+			this.linkWebSite.TabIndex = 4;
+			this.linkWebSite.TabStop = true;
+			this.linkWebSite.Text = "http://stevenbenner.com/";
+			this.linkWebSite.TextAlign = System.Drawing.ContentAlignment.TopRight;
+			this.linkWebSite.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkWebSite_LinkClicked);
 			// 
 			// label2
 			// 
@@ -132,7 +132,7 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(329, 188);
 			this.Controls.Add(this.label2);
-			this.Controls.Add(this.linkLabel1);
+			this.Controls.Add(this.linkWebSite);
 			this.Controls.Add(this.groupBox1);
 			this.Controls.Add(this.textFileName);
 			this.Controls.Add(this.label1);
@@ -158,7 +158,7 @@
 		private System.Windows.Forms.TextBox textFileName;
 		private System.Windows.Forms.GroupBox groupBox1;
 		private System.Windows.Forms.Button buttonCopy;
-		private System.Windows.Forms.LinkLabel linkLabel1;
+		private System.Windows.Forms.LinkLabel linkWebSite;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.RichTextBox textEncodedString;
 	}

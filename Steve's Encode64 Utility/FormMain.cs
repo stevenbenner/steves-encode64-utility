@@ -108,7 +108,7 @@ namespace Steves_Encode64_Utility
 			Clipboard.SetText(textEncodedString.Text, TextDataFormat.Text);
 		}
 
-		private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+		private void linkWebSite_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
 		{
 			System.Diagnostics.Process.Start("http://stevenbenner.com/?utm_source=apps&utm_medium=encode64&utm_campaign=Apps%3A%2BEncode64%20Tool");
 		}
