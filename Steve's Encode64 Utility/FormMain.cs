@@ -97,9 +97,9 @@ namespace Steves_Encode64_Utility
 
 		private void buttonBrowse_Click(object sender, EventArgs e)
 		{
-			if (openFileDialog1.ShowDialog() != DialogResult.Cancel)
+			if (openFileDialog.ShowDialog() != DialogResult.Cancel)
 			{
-				ProcessFile(openFileDialog1.FileName);
+				ProcessFile(openFileDialog.FileName);
 			}
 		}
 
