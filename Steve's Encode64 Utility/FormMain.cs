@@ -23,6 +23,10 @@ namespace Steves_Encode64_Utility
 			InitializeComponent();
 		}
 
+		/// <summary>
+		/// Loads a file and displays the base 64 encoded value.
+		/// </summary>
+		/// <param name="filePath">The path to the file to load.</param>
 		private void ProcessFile(string filePath)
 		{
 			if (!CheckFileSize(filePath)) {
@@ -40,6 +44,11 @@ namespace Steves_Encode64_Utility
 			textEncodedString.Text = sb.ToString();
 		}
 
+		/// <summary>
+		/// Returns a string with the base 64 encoded content of a file.
+		/// </summary>
+		/// <param name="filePath">The path to the file to load.</param>
+		/// <returns>A string with the base 64 encoded file contents.</returns>
 		private string Base64Encode(string filePath)
 		{
 			byte[] buffer;
@@ -55,6 +64,11 @@ namespace Steves_Encode64_Utility
 			return Convert.ToBase64String(buffer);
 		}
 
+		/// <summary>
+		/// Returns the MIME type of a file.
+		/// </summary>
+		/// <param name="filePath">The path to the file to check.</param>
+		/// <returns>A string with the MIME type.</returns>
 		private string GetMimeType(string filePath)
 		{
 			string mimeType = "application/unknown";
@@ -70,6 +84,11 @@ namespace Steves_Encode64_Utility
 			return mimeType;
 		}
 
+		/// <summary>
+		/// Check if the file is larger than recommended and warn the user.
+		/// </summary>
+		/// <param name="filePath">The path to the file to check.</param>
+		/// <returns>True if the file is accepted, false if the user rejected it.</returns>
 		private bool CheckFileSize(string filePath)
 		{
 			FileInfo fi = new FileInfo(filePath);
