@@ -11,6 +11,7 @@ using System;
 using System.IO;
 using System.Text;
 using System.Windows.Forms;
+using Microsoft.Win32;
 
 namespace Steves_Encode64_Utility
 {
@@ -74,7 +75,7 @@ namespace Steves_Encode64_Utility
 			string mimeType = "application/unknown";
 			string ext = Path.GetExtension(filePath).ToLower();
 
-			Microsoft.Win32.RegistryKey regKey = Microsoft.Win32.Registry.ClassesRoot.OpenSubKey(ext);
+			RegistryKey regKey = Registry.ClassesRoot.OpenSubKey(ext);
 
 			if (regKey != null && regKey.GetValue("Content Type") != null)
 			{
