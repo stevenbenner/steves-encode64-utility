@@ -2,7 +2,7 @@
 
 This is my Encode64 tool for Microsoft Windows. It's used for creating data URIs.
 
-![Steve's Encode64 Utility Screen Shot](http://static.stevenbenner.name/wp-content/uploads/steves-encode64-utility.png)
+![Steve's Encode64 Utility Screen Shot](http://stevenbenner.github.io/steves-encode64-utility/steves-encode64-utility.png)
 
 ## Download
 
