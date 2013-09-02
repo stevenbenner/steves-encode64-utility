@@ -135,7 +135,10 @@ namespace Steves_Encode64_Utility
 
 		private void FormMain_DragEnter(object sender, DragEventArgs e)
 		{
-			e.Effect = DragDropEffects.Link;
+			if (e.Data.GetDataPresent(DataFormats.FileDrop))
+			{
+				e.Effect = DragDropEffects.Link;
+			}
 		}
 
 		private void FormMain_DragDrop(object sender, DragEventArgs e)
