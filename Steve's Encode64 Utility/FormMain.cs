@@ -54,7 +54,7 @@ namespace Steves_Encode64_Utility
 		{
 			byte[] buffer;
 
-			using (FileStream fs = new FileStream(filePath, FileMode.Open))
+			using (FileStream fs = new FileStream(filePath, FileMode.Open, FileAccess.Read))
 			{
 				int length = Convert.ToInt32(fs.Length);
 				buffer = new byte[length];
