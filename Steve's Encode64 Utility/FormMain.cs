@@ -154,7 +154,7 @@ namespace Steves_Encode64_Utility
 					"Sorry, one file at a time please!",
 					"Steve's Encode64 Utility",
 					MessageBoxButtons.OK,
-					MessageBoxIcon.Exclamation
+					MessageBoxIcon.Warning
 				);
 				return;
 			}
