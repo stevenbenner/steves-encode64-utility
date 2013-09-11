@@ -99,7 +99,7 @@ namespace Steves_Encode64_Utility
 				DialogResult dr = MessageBox.Show(
 					this,
 					"The file you are attempting to process is quite large, are you sure you want to do this?",
-					"Steve's Encode64 Utility",
+					this.Text,
 					MessageBoxButtons.YesNo,
 					MessageBoxIcon.Warning
 				);
@@ -152,7 +152,7 @@ namespace Steves_Encode64_Utility
 				MessageBox.Show(
 					this,
 					"Sorry, one file at a time please!",
-					"Steve's Encode64 Utility",
+					this.Text,
 					MessageBoxButtons.OK,
 					MessageBoxIcon.Warning
 				);
