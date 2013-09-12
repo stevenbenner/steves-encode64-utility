@@ -28,6 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
 			this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
 			this.buttonBrowse = new System.Windows.Forms.Button();
 			this.label1 = new System.Windows.Forms.Label();
@@ -134,9 +135,9 @@
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.buttonBrowse);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.MaximizeBox = false;
 			this.Name = "FormMain";
-			this.ShowIcon = false;
 			this.Text = "Steve\'s Encode64 Utility";
 			this.DragDrop += new System.Windows.Forms.DragEventHandler(this.FormMain_DragDrop);
 			this.DragEnter += new System.Windows.Forms.DragEventHandler(this.FormMain_DragEnter);
