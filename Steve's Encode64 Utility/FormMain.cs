@@ -17,7 +17,7 @@ namespace Steves_Encode64_Utility
 {
 	public partial class FormMain : Form
 	{
-		private const int maxFileSize = 10485760;
+		private const int MAX_FILE_SIZE = 10485760;
 
 		public FormMain()
 		{
@@ -94,7 +94,7 @@ namespace Steves_Encode64_Utility
 		{
 			FileInfo fi = new FileInfo(filePath);
 
-			if (fi.Length > maxFileSize)
+			if (fi.Length > MAX_FILE_SIZE)
 			{
 				DialogResult dr = MessageBox.Show(
 					this,
