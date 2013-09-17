@@ -34,14 +34,13 @@ namespace Steves_Encode64_Utility
 				return;
 			}
 
-			textFileName.Text = filePath;
-
 			StringBuilder sb = new StringBuilder();
 			sb.Append("data:");
 			sb.Append(GetMimeType(filePath));
 			sb.Append(";base64,");
 			sb.Append(Base64Encode(filePath));
 
+			textFileName.Text = filePath;
 			textEncodedString.Text = sb.ToString();
 		}
 
