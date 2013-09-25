@@ -74,11 +74,12 @@ namespace Steves_Encode64_Utility
 			string mimeType = "application/unknown";
 			string ext = Path.GetExtension(filePath).ToLower();
 
-			RegistryKey regKey = Registry.ClassesRoot.OpenSubKey(ext);
-
-			if (regKey != null && regKey.GetValue("Content Type") != null)
+			using (RegistryKey regKey = Registry.ClassesRoot.OpenSubKey(ext))
 			{
-				mimeType = regKey.GetValue("Content Type").ToString();
+				if (regKey != null && regKey.GetValue("Content Type") != null)
+				{
+					mimeType = regKey.GetValue("Content Type").ToString();
+				}
 			}
 
 			return mimeType;
