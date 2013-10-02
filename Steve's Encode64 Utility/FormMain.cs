@@ -76,9 +76,9 @@ namespace Steves_Encode64_Utility
 
 			using (RegistryKey regKey = Registry.ClassesRoot.OpenSubKey(ext))
 			{
-				if (regKey != null && regKey.GetValue("Content Type") != null)
+				if (regKey != null)
 				{
-					mimeType = regKey.GetValue("Content Type").ToString();
+					mimeType = regKey.GetValue("Content Type", mimeType) as string;
 				}
 			}
 
