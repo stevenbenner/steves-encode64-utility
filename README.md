@@ -15,6 +15,7 @@ If you want to download the latest executable then go to the **[web site](http:/
 
 ## Information
 
+* The MIME media type output is best effort. It uses the Window registry and your system may not have all media types set.
 * This tool is for almost any version of Microsoft Windows (sorry Mac and Linux users).
 * This is a Visual Studio 2010 project.
 
