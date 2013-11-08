@@ -149,8 +149,10 @@ namespace Steves_Encode64_Utility
 			this.Activate();
 
 			string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
+			FileAttributes fa = File.GetAttributes(files[0]);
 
-			if (files.Length != 1)
+			// reject file drops that contain more than one file or are a directory
+			if (files.Length != 1 || (fa & FileAttributes.Directory) == FileAttributes.Directory)
 			{
 				MessageBox.Show(
 					this,
